@@ -25,12 +25,13 @@
                     FontSize="18"
                     FontAttributes="Bold"
                     x:Name="ShowHide"
+                       IsVisible="{Binding ShowLabel}"
                     HorizontalOptions="Center" />
 
                 <Button Text="Click me"
                     Grid.Row="3"
                     SemanticProperties.Hint="Shows or hides a label when you click"
-                    Clicked="OnShowLabelClicked"
+                    Command="{Binding ShowHideCommand}"
                     HorizontalOptions="Center" />
 
                 <Image Grid.Row="4"
