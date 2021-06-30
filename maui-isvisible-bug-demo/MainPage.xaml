@@ -1,0 +1,45 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui_isvisible_bug_demo.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ScrollView Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+        <StackLayout>
+            <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*">
+            
+                <Label Text="Hello, World!"
+                    Grid.Row="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="32"
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="Welcome to .NET Multi-platform App UI"
+                    Grid.Row="1"
+                    SemanticProperties.Hint="Shows or hides a label when you click" 
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="This Label is Visible"
+                    Grid.Row="2"
+                    SemanticProperties.Hint="Appears or disappears wehn you click"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    x:Name="ShowHide"
+                    HorizontalOptions="Center" />
+
+                <Button Text="Click me"
+                    Grid.Row="3"
+                    SemanticProperties.Hint="Shows or hides a label when you click"
+                    Clicked="OnShowLabelClicked"
+                    HorizontalOptions="Center" />
+
+                <Image Grid.Row="4"
+                    Source="dotnet_bot.png"
+                    SemanticProperties.Description="Cute dotnet bot waving hi to you!"
+                    WidthRequest="300"
+                    HorizontalOptions="Center" />
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "maui_isvisible_bug_demo.WinUI": {
+      "commandName": "AppContainer"
+    }
+  }
+}
